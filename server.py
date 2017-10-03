@@ -2,28 +2,14 @@ from flask import Flask, jsonify, abort, make_response, request
 
 app = Flask(__name__)
 
-tasks = [{
-    'id': 1,
-    'temp': 38,
-    'hum': 49,
-    'done': False
-}, {
-    'id': 2,
-    'temp': 44,
-    'hum': 88,
-    'done': False
-}]
-
-
 @app.route('/contents', methods=['GET'])
-def get_tasks():
-
+def get_temperature():
     return jsonify({'tasks': tasks})
 
 
 @app.route('/contents', methods=['POST'])
-def create_task():
-    if not request.json or not 'title' in request.json:
+def create_tempearture():
+    if not request.json or not 'temperature' in request.json:
         abort(400)
     task = {
         'id': tasks[-1]['id'] + 1,
@@ -31,7 +17,10 @@ def create_task():
         'hum': request.json.get('descritpion', ""),
         'done': False
     }
-    tasks.append(task)
+    cursor = sqlite3.connect("./tempData.db").cursor()
+    cursor.execute('''insert into running values('')''')
+
+
     return jsonify({'task': task}), 201
 
 
