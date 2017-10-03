@@ -172,7 +172,8 @@ venv.bak/
 # End of https://www.gitignore.io/api/python,pycharm
 #db
 tempData.db
-Würde .idea/ löschen
+.idea/
+
 Würde static/ löschen
 Würde templates/ löschen
 Würde .idea/inspectionProfiles/ löschen
