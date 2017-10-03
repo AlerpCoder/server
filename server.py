@@ -17,9 +17,7 @@ tasks = [{
 
 @app.route('/contents', methods=['GET'])
 def get_tasks():
-    # task = [task for task in tasks if task['id'] == task_id]
-    # if len(task) == 0:
-    #     abort(404)
+
     return jsonify({'tasks': tasks})
 
 

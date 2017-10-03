@@ -170,7 +170,11 @@ venv.bak/
 .mypy_cache/
 
 # End of https://www.gitignore.io/api/python,pycharm
+#db
+tempData.db
 Würde .idea/ löschen
 Würde static/ löschen
 Würde templates/ löschen
 Würde .idea/inspectionProfiles/ löschen
+Würde .idea/vcs.xml löschen
+Würde tempData.db löschen
