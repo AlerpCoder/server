@@ -34,7 +34,7 @@ def not_found(error):
 
 @app.errorhandler(400)
 def not_found(error):
-    return make_response(jsonify({'error': error}), 404)
+    return make_response(jsonify({'error': error}), 400)
 
 
 if __name__ == '__main__':
