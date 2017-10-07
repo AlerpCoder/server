@@ -2,7 +2,6 @@ import json
 import logging
 import sqlite3
 import time
-from functools import reduce
 
 from flask import Flask, jsonify, render_template, make_response, request
 

@@ -173,9 +173,4 @@ venv.bak/
 #db
 tempData.db
 .idea/
-
-Würde templates/ löschen
-Würde .idea/inspectionProfiles/ löschen
-Würde .idea/vcs.xml löschen
-Würde tempData.db löschen
 /static/js/Chart.bundle.min.js
