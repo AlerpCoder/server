@@ -10,6 +10,9 @@ app = Flask(__name__)
 
 def get_json():
     connect = sqlite3.connect("./tempData.db")
+    print(connect)
+    cur = connect.cursor()
+    print(cur)
     temps = []
     for row in connect.execute("SELECT * FROM temp"):
         temps.append({"date": row[0], "temperature": row[1], "humidity": row[2]})
