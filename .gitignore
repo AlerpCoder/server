@@ -173,4 +173,4 @@ venv.bak/
 #db
 tempData.db
 .idea/
-/static/js/Chart.bundle.min.js
+#/static/js/Chart.bundle.min.js
